@@ -11,11 +11,12 @@
             <textarea name="contents" placeholder="Reply to this post..." required class="large-textarea"></textarea>
             <button type="submit">Submit</button>
         </form>
+        <h4 style="font-size: 25px;">Comments:</h4>
     </div>
     <div>
-        <h4>Comments:</h4>
+
         <div>
-            {{#each blogPosts.comment as |Comment|}}
+            {{#each blogPosts.comments as |Comment|}}
             {{> comment-details}}
             {{/each}}
         </div>
