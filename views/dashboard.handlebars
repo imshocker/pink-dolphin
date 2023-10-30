@@ -6,4 +6,13 @@
             <button type="submit">Create Blog Post</button>
         </form>
     </div>
+
+    {{#if blogPosts.length}}
+        <div style="text-align: center; font-size: 25px; padding: 10px;">Your Blogs:</div>
+        {{#each blogPosts as |blogPost|}}
+            {{> blogPost-details}} <!-- Assuming you have a partial for displaying individual blog posts -->
+        {{/each}}
+    {{else}}
+        <p>No blog posts found.</p>
+    {{/if}}
 </main>

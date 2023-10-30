@@ -29,7 +29,7 @@ blogPost.init(
         allowNull: false, // Add allowNull for the foreign key
         references: {
             model: "user",
-            key: "username",
+            key: "id",
         },
     },
   },

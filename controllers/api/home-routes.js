@@ -4,15 +4,16 @@ const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
     try {
-      // const UserData = await User.findAll({
-      //   include: [
-      //     {
-      //       model: blogPost,
-      //       attributes: ["id", "date", "contents",],
-      //     },
-      //   ],
-      // })
-      
+      const UserData = await User.findAll({
+        include: [
+          {
+            model: blogPost,
+            attributes: ["id", "date", "contents",],
+          },
+        ],
+        
+      });
+      console.log(UserData)
       const blogPostData = await blogPost.findAll({
         include: [
           {
@@ -144,6 +145,32 @@ router.get("/", async (req, res) => {
   //   }
   // });
 
+  router.get("/dashboard", withAuth, async (req, res) => {
+    try {
+      const blogPostData = await blogPost.findAll({
+        where: {
+          user_id: req.session.user_id
+        },
+        include: [
+          {
+            model: Comment,
+            attributes: ['id', 'date', 'contents', 'user_name']
+          }
+        ],
+      });
+  
+      const blogPosts = blogPostData.get({ plain: true });
+  
+      res.render('dashboard', {
+        blogPosts,
+        loggedIn: req.session.loggedIn
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+
 
 
   router.get("/login", (req, res) => {
@@ -153,5 +180,7 @@ router.get("/", async (req, res) => {
       res.render("login");
     }
   });
+
+// console.log(req.session.user_name);
   
   module.exports = router;

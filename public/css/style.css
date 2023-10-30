@@ -96,7 +96,7 @@ color: #00ff00 !important;
 .container-header {
     padding: 10px;
     border-top: 3px dotted #00ff00;
-    border-bottom: 3px solid #00ff00;
+    /* border-bottom: 3px solid #00ff00; */
 }
 
 .container-main {
@@ -186,6 +186,7 @@ h1 {
 }
 
 .blog-title {
+    border-top: 3px solid #00ff00;
     font-size: 30px;
     padding: 10px;
     font-weight: bold;
