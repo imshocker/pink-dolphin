@@ -1,10 +1,9 @@
-
 /* body {
 font-family: Courier New, monospace;
 background-color: black;
 }; */
 
-body::before {
+/* body::before {
 content: " ";
 display: block;
 position: fixed;
@@ -18,27 +17,27 @@ background-size: 100% 2px, 3px 100%;
 pointer-events: none;
 };
 
-#q, button {
+button {
 color: #00ff00;
 background-color: black;
 border: 1px solid #00ff00;
 font-family: inherit;
-};
+}; */
 
-button {
+/* button {
 color: #00ff00 !important;
 text-decoration: underline !important;
-};
+}; */
 
-.container {
+/* .container {
 margin: 0 auto 0;
-};
+}; */
 
-nav .links a {
+/* nav .links a {
 color: #00ff00;
-};
+}; */
 
-nav {
+/* nav {
 margin-top: 2px;
 background: none;
 background-color: black;
@@ -54,9 +53,18 @@ border: 2px solid #00ff00;
 .container-main {
 background: black;
 color: #00ff00;
-border-left: 2px dotted #00ff00;
-border-right: 2px dotted #00ff00;
+border: 2px dotted #00ff00;
+display: flex;
+justify-content: center;
 };
+
+.card-blog {
+    background: black;
+    color: #00ff00;
+    border: 2px dotted #00ff00;
+    display: flex;
+    justify-content: center;
+    };
 
 .container-header {
 color: #00ff00 !important;
@@ -69,11 +77,6 @@ border: 2px solid #00ff00 !important;
 border-bottom: 2px dotted #00ff00;
 };
 
-.details-table, td {
-border: 1px solid #00ff00;
-border-collapse: collapse;
-};
-
 footer {
 background: black;
 border: 2px dotted #00ff00;
@@ -82,4 +85,149 @@ border: 2px dotted #00ff00;
 footer p {
 color: #00ff00 !important;
 };
+ */
 
+* {
+    color: #00ff00;
+    background-color: black;
+    font-family: Courier New, monospace;
+}
+
+.container-header {
+    padding: 10px;
+    border-top: 3px dotted #00ff00;
+    border-bottom: 3px solid #00ff00;
+}
+
+.container-main {
+    background: black;
+    color: #00ff00;
+    border-left: 3px dotted #00ff00;
+    border-right: 3px dotted #00ff00;
+    
+}
+
+#logout {
+    border:  2px solid #00ff00;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+#login {
+    border:  2px solid #00ff00;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#home {
+    border:  2px solid #00ff00;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#dashboard {
+    border:  2px solid #00ff00;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 2px solid #00ff00;
+    border-bottom: 2px solid #00ff00;
+}
+
+.card-header{
+
+    border-bottom: 3px dotted #00ff00;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.card-contents {
+    padding: 10px;
+}
+
+.card-poster {
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #00ff00;
+    text-align: center;
+}
+
+.row {
+    margin: 100px;
+}
+
+.btn-primary {
+    border:  2px solid #00ff00;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 5px;
+}
+
+.blog-title {
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.blog-user {
+    font-style: italic;
+    padding: 10px
+}
+
+.blog-contents {
+    padding: 20px;
+}
+
+.comment-section {
+    border-top: 3px dotted #00ff00;
+    padding-top: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.comment-contents {
+    padding: 20px;
+}
+
+.comment-user {
+    padding-left: 20px;
+    font-style: italic;
+}
+
+button{
+    border:  2px solid #00ff00;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 5px;
+}
+
+.large-textarea {
+    width: 80%;
+    height: 100px;
+    border-color: #00ff00;
+    padding: 10px;
+}

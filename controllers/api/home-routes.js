@@ -26,6 +26,7 @@ router.get("/", async (req, res) => {
         blogPost.get({ plain: true })
       );
         console.log(blogPosts)
+        console.log(blogPosts.Comment)
       res.render("homepage", {
         blogPosts,
         loggedIn: req.session.loggedIn,
@@ -50,7 +51,7 @@ router.get("/", async (req, res) => {
       const blogPosts = blogPostData.get({ plain: true });
       console.log("Checking blogPosts")
       console.log(blogPosts)
-      console.log(blogPosts.comments[0].description)
+      console.log(blogPosts.comments[0].contents)
       res.render("blogPost", { blogPosts, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
@@ -90,6 +91,60 @@ router.get("/", async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.post('/create-comment', withAuth, async (req, res) => {
+    try {
+
+      const newComment = await Comment.create({
+        id,
+        contents,
+        date,
+        blogPost_id,
+      });
+
+      const { contents } = req.body;
+
+      const CommentData = Comment.findAll();
+  
+      const Comment = CommentData.get({ plain: true });
+  
+      res.redirect(`/blogPost/${newComment.id}`);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json(err);
+    }
+  });
+
+
+  // router.post('/create-comment', withAuth, async (req, res) => {
+  //   try {
+  //     const { contents } = req.body;
+
+  //     const CommentData = Comment.findAll();
+  
+  //     const Comment = CommentData.get({ plain: true });
+  
+  //     const newComment = await Comment.create({
+  //       id,
+  //       contents,
+  //       date,
+  //       blogPost_id,
+  //     });
+      
+  //     console.log(newComment);
+
+  //     req.session.save(() => {
+  //       req.session.loggedIn = true;
+  
+  //       res.status(200).json(CommentData);
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   }
+  // });
+
+
 
   router.get("/login", (req, res) => {
     if (req.session.loggedIn) {

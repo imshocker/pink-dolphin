@@ -5,25 +5,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Tech Blog</title>
-    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 
-<body>
-    <header class="container-header">
-        <nav>
-            <a href="/">Home</a>
-            {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">Logout</button>
-            <a href="/dashboard">Dashboard</a>
-            {{else}}
-            <a href="/login">Login</a>
-            {{/if}}
-        </nav>
-        <h1>Tech Blog</h1>
-    </header>
+<header class="container-header">
+    <nav>
+        <a href="/" id="home">Home</a>
+        {{#if loggedIn}}
+        <a href="/dashboard" id="dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login" id="login">Login</a>
+        {{/if}}
+    </nav>
+    <h1>The Tech Blog</h1>
+</header>
 
-    <div class="container-main">
+<body class="container-main">
+    <div class="card-blog">
         {{{body}}}
     </div>
 
