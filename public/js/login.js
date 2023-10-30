@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const loginCard = document.getElementById('loginCard');
+  const signupCard = document.getElementById('signupCard');
+  const showSignup = document.getElementById('showSignup');
+  const showLogin = document.getElementById('showLogin');
+
+  showSignup.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginCard.style.display = 'none';
+      signupCard.style.display = 'block';
+  });
+
+  showLogin.addEventListener('click', function(e) {
+      e.preventDefault();
+      signupCard.style.display = 'none';
+      loginCard.style.display = 'block';
+  });
+});
+
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
