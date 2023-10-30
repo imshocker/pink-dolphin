@@ -1,0 +1,23 @@
+<main>
+    <div class="container-blog">
+        <section class="blog-title">{{blogPosts.title}}</section>
+        <section class="blog-user">-{{blogPosts.user_name}} : {{blogPosts.date}}</section>
+        <div class="blog-contents">
+            <h3>{{blogPosts.contents}}</h3>
+        </div>
+    </div>
+    <div class="comment-section">
+        <form action="/create-comment" method="POST">
+            <textarea name="contents" placeholder="Reply to this post..." required class="large-textarea"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <h4>Comments:</h4>
+        <div>
+            {{#each Comment as |Comment|}}
+            {{> comment-details}}
+            {{/each}}
+        </div>
+    </div>
+</main>

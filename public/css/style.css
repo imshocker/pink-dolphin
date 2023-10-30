@@ -1,8 +1,8 @@
 
-body {
+/* body {
 font-family: Courier New, monospace;
 background-color: black;
-};
+}; */
 
 body::before {
 content: " ";
@@ -25,7 +25,7 @@ border: 1px solid #00ff00;
 font-family: inherit;
 };
 
-a, .logout-btn {
+button {
 color: #00ff00 !important;
 text-decoration: underline !important;
 };
@@ -34,11 +34,11 @@ text-decoration: underline !important;
 margin: 0 auto 0;
 };
 
-nav, nav .links a {
+nav .links a {
 color: #00ff00;
 };
 
-nav .top {
+nav {
 margin-top: 2px;
 background: none;
 background-color: black;
@@ -51,32 +51,18 @@ background-color: black;
 border: 2px solid #00ff00;
 };
 
-main {
+.container-main {
 background: black;
 color: #00ff00;
 border-left: 2px dotted #00ff00;
 border-right: 2px dotted #00ff00;
 };
 
-.heading {
+.container-header {
 color: #00ff00 !important;
 background: none;
 background-color: black !important;
 border: 2px solid #00ff00 !important;
-};
-
-.inner {
-color: #00ff00 !important;
-border: 2px dotted #00ff00;
-border-top: none;
-};
-
-.profile-info {
-border: 2px solid #00ff00;
-};
-
-.profile-info .inner {
-border: none;
 };
 
 #comments {
@@ -88,12 +74,6 @@ border: 1px solid #00ff00;
 border-collapse: collapse;
 };
 
-td {
-color: #00ff00 !important;
-background: none;
-background-color: black !important;
-};
-
 footer {
 background: black;
 border: 2px dotted #00ff00;
@@ -103,16 +83,3 @@ footer p {
 color: #00ff00 !important;
 };
 
-.comments-table {
-border: none;
-border-collapse: collapse;
-};
-
-.comment-replies {
-border: 1px solid #00ff00;
-margin: 2px;
-};
-
-nav .info {
-background: none;
-};
