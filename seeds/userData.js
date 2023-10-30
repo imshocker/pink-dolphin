@@ -3,38 +3,47 @@ const { User } = require('../models');
 
 const userData = [
     {
+        id: 1,
         username: 'mws1997',
-        password: 'password1', // Plain text password
+        password: 'password1', // Plain text passwords get hashed into DB
     },
     {
+        id: 2,
         username: 'mortimer',
         password: 'password2',
     },
     {
+        id: 3,
         username: 'chrisJ77',
         password: 'password3',
     },
     {
+        id: 4,
         username: 'VectorMan',
         password: 'password4',
     },
     {
+        id: 5,
         username: 'NoobSaibot',
         password: 'password5',
     },
     {
+        id: 6,
         username: 'kirby333',
         password: 'password6',
     },
     {
+        id: 7,
         username: 'rickC137',
         password: 'password7',
     },
     {
+        id: 8,
         username: 'frankB',
         password: 'password8',
     },
     {
+        id: 9,
         username: 'osmosis',
         password: 'password9',
     },
