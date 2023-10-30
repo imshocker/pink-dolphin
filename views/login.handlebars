@@ -1,5 +1,5 @@
 <div class="row justify-space-between-md">
-    <div class="login-card">
+    <div class="login-card" id="loginCard">
         <h2 class="page-title">Login</h2>
         <form class="form login-form">
             <div class="form-group">
@@ -14,8 +14,9 @@
                 <button class="btn btn-primary" type="submit">login</button>
             </div>
         </form>
+        <p><a href="#" id="showSignup">Don't have an account? Sign Up</a></p>
     </div>
-    <div class="login-card">
+    <div class="login-card" id="signupCard" style="display: none;">
         <h2 class="page-title">Signup</h2>
         <form class="form signup-form">
             <div class="form-group">
@@ -30,6 +31,7 @@
                 <button class="btn btn-primary" type="submit">signup</button>
             </div>
         </form>
+        <p><a href="#" id="showLogin">Already have an account? Login</a></p>
     </div>
     <p class="join-today">Join today and start chatting!</p>
 </div>

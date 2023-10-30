@@ -22,6 +22,7 @@ blogPost.init(
     date: {
       type: DataTypes.DATE,
       allowNull: false,
+      
     },
     user_name: {
         type: DataTypes.STRING,
