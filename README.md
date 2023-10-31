@@ -5,7 +5,7 @@
 
 The Tech Blog - This is a web page for users to connect and share ideas, opinons, or look for help with an issue.
 
-Link to Site:
+Link to Site: https://pink-dolphin-01-f0fa109671a0.herokuapp.com/
 
 ## Installation
 
