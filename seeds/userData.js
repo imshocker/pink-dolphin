@@ -6,11 +6,13 @@ const userData = [
         id: 1,
         username: 'mws1997',
         password: 'password1', // Plain text passwords get hashed into DB
+        blogposts: ['Need help debugging.',]
     },
     {
         id: 2,
         username: 'mortimer',
         password: 'password2',
+        blogposts: ['Dimensions',]
     },
     {
         id: 3,
@@ -46,6 +48,11 @@ const userData = [
         id: 9,
         username: 'osmosis',
         password: 'password9',
+    },
+    {
+        id: 10,
+        username: 'Testing',
+        password: 'password123',
     },
 ];
 

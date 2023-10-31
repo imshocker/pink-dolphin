@@ -1,9 +1,9 @@
-const {Comment} = require('../models');
+const { Comment } = require('../models');
 const commentdata = [
 
   {
     blogpost_id: 1,
-    date: '11/22/2015',
+    date: '10/27/2023',
     user_name: 'kirby333',
     contents: 'My suggestion would be to create a minimum version of your website in codepen.io 8 or codesandbox.io 4 that replicates your issue. It will it make it easier of us to help you.',
   },
