@@ -1,18 +1,42 @@
-<main>
-    <div class="create-form">
-        <form action="/create-blog-post" method="POST">
-            <input type="text" name="title" placeholder="Title" required>
-            <textarea name="contents" placeholder="Description" required class="large-textarea"></textarea>
-            <button type="submit">Create Blog Post</button>
-        </form>
-    </div>
-
-    {{#if blogPosts.length}}
+<div class="row">
+        <div class="user-blog">
+        {{#if blogPosts.length}}
         <div style="text-align: center; font-size: 25px; padding: 10px;">Your Blogs:</div>
         {{#each blogPosts as |blogPost|}}
-            {{> blogPost-details}} <!-- Assuming you have a partial for displaying individual blog posts -->
+        {{> blogPost-details}}
         {{/each}}
-    {{else}}
-        <p>No blog posts found.</p>
-    {{/if}}
-</main>
+        {{else}}
+        <p style="text-align: center;">No blog posts found.</p>
+        {{/if}}
+    </div>
+    <div class="create-form">
+        <div class="container-cb">
+            <form action="/create-blogpost" method="POST">
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="contents" placeholder="Description" required class="large-textarea"></textarea>
+                <button type="submit">Create Blog Post</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{!-- <div class="row">
+    <div class="login-card" id="loginCard">
+        <h2 class="page-title">Login</h2>
+        <form class="form login-form">
+            <div class="form-group">
+                <label for="username-login">Username:</label>
+                <input class="form-input" type="text" id="username-login" />
+            </div>
+            <div class="form-group">
+                <label for="password-login">Password:</label>
+                <input class="form-input" type="password" id="password-login" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">login</button>
+            </div>
+        </form>
+        <p><a href="#" id="showSignup">Don't have an account? Sign Up</a></p>
+        <p class="join-today">Join today and start chatting!</p>
+    </div>
+</div> --}}
